@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Monetize</title>
-  <meta name="description" content="Learn website monetization methods in a fun, interactive way—while we monetize this site in real-time!" />
+  <title>How to Monetize Your Site: Interactive Tutorial</title>
+  <meta name="description" content="Learn website monetization methods in a fun, interactive way—live examples and real‑time revenue simulation!" />
   <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="How to Monetize" />
-  <meta property="og:description" content="A tutorial that teaches monetization by doing it live!" />
+  <meta property="og:title" content="How to Monetize Your Site" />
+  <meta property="og:description" content="An interactive tutorial that teaches website monetization by doing it live." />
   <meta property="og:image" content="https://how-to-monetize.com/og-image.jpg" />
   <!-- Schema Markup for SEO -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "How to Monetize",
-      "description": "A tutorial on website monetization methods with live examples."
+      "name": "How to Monetize Your Site",
+      "description": "An interactive tutorial on website monetization methods with live examples."
     }
   </script>
   <link rel="stylesheet" href="styles.css" />
@@ -25,6 +25,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
+  <!-- Fixed Arrow Overlay (front‑layer with a hand‑drawn style) -->
+  <div id="arrow-overlay">
+    <svg class="hand-drawn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <path d="M10,50 L90,50" stroke="#4a90e2" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M70,30 L90,50 L70,70" stroke="#4a90e2" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
   <!-- Header Layer -->
   <header id="header" class="layer">
     <h1>So you want to monetize your site?</h1>
@@ -33,12 +41,12 @@
 
   <!-- Main Content Layer -->
   <main class="layer">
-    <section id="introduction">
+    <section id="introduction" class="monetization-section lazy-section" data-content="introduction">
       <h2>Introduction</h2>
       <p>Monetizing your website is all about turning your traffic into cash. Whether you’ve got a blog, a portfolio, or just a cool idea, there are tons of ways to make money online. In this tutorial, I’ll break down the most popular methods and show you how they work—by actually using them on this page. As you scroll, you’ll see real ads, affiliate links, and more, each with an arrow pointing to it so you can see it in action. Pretty meta, huh? Let’s kick things off with one of the classics: display ads.</p>
     </section>
 
-    <section id="display-ads" class="monetization-section">
+    <section id="display-ads" class="monetization-section lazy-section" data-content="display-ads">
       <h2>Display Ads</h2>
       <h3>What Are They?</h3>
       <p>Display ads are those banners, boxes, or videos you see on websites. Ad networks like Google AdSense pay you every time someone views or clicks them. It’s a simple way to earn passive income, and you’ve probably seen them all over the internet.</p>
@@ -56,14 +64,14 @@
         <li>Test different sizes and positions to see what works.</li>
       </ul>
       <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px; text-align: center;">[Ad Placeholder: Imagine a real banner ad here!]</div>
-      <span style="color: #4a90e2;">← Here’s what a side-of-the-page ad looks like!</span>
+      <div class="placeholder">[Ad Placeholder: Imagine a real banner ad here!]</div>
+      <span class="section-arrow">← Here’s what a side‑of‑the‑page ad looks like!</span>
       <p>This is where a real ad would sit—maybe a 300x250 pixel banner. If this were live, I’d earn a few cents every time you saw it or clicked it.</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $0.10 from a display ad click!');">Simulate Ad Click (+$0.10)</button>
+      <button class="simulate-btn" data-method="display-ads">Simulate Ad Click (+$0.10)</button>
     </section>
 
-    <section id="affiliate-marketing" class="monetization-section">
+    <section id="affiliate-marketing" class="monetization-section lazy-section" data-content="affiliate-marketing">
       <h2>Affiliate Marketing</h2>
       <h3>What Is It?</h3>
       <p>Affiliate marketing is when you promote someone else’s product and earn a commission for every sale made through your link. Think of it like being a digital salesperson.</p>
@@ -78,17 +86,17 @@
       <ul>
         <li>Pick products that match your audience.</li>
         <li>Be honest—disclose that it’s an affiliate link.</li>
-        <li>Use compelling calls-to-action (CTAs).</li>
+        <li>Use compelling calls‑to‑action (CTAs).</li>
       </ul>
       <h3>Live Example</h3>
-      <a href="https://example.com/affiliate-product" style="color: #4a90e2;">Buy this awesome web hosting plan!</a>
-      <span style="color: #4a90e2;">← This is an affiliate link!</span>
+      <a href="https://example.com/affiliate-product" class="affiliate-link">Buy this awesome web hosting plan!</a>
+      <span class="section-arrow">← This is an affiliate link!</span>
       <p>If you clicked that and bought hosting, I’d earn a commission—maybe $5 or more.</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $5.00 from an affiliate sale!');">Simulate Purchase (+$5.00)</button>
+      <button class="simulate-btn" data-method="affiliate-marketing">Simulate Purchase (+$5.00)</button>
     </section>
 
-    <section id="sponsored-content" class="monetization-section">
+    <section id="sponsored-content" class="monetization-section lazy-section" data-content="sponsored-content">
       <h2>Sponsored Content</h2>
       <h3>What Is It?</h3>
       <p>Sponsored content is when a brand pays you to write about them or feature their stuff on your site. It’s like an ad, but more integrated into your content.</p>
@@ -106,14 +114,14 @@
         <li>Negotiate fair rates based on your reach.</li>
       </ul>
       <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px;">[Sponsored by CoolBrand™: This section is brought to you by our pals at CoolBrand!]</div>
-      <span style="color: #4a90e2;">← This is sponsored content!</span>
+      <div class="placeholder">[Sponsored by CoolBrand™: This section is brought to you by our pals at CoolBrand!]</div>
+      <span class="section-arrow">← This is sponsored content!</span>
       <p>A real sponsor might pay $50 or more for this spot.</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $50.00 from a sponsor!');">Simulate Sponsorship (+$50.00)</button>
+      <button class="simulate-btn" data-method="sponsored-content">Simulate Sponsorship (+$50.00)</button>
     </section>
 
-    <section id="selling-digital-products" class="monetization-section">
+    <section id="selling-digital-products" class="monetization-section lazy-section" data-content="digital-products">
       <h2>Selling Digital Products</h2>
       <h3>What Is It?</h3>
       <p>You create and sell your own stuff—like ebooks, courses, or templates—directly to your audience. It’s all profit, minus platform fees.</p>
@@ -131,19 +139,19 @@
         <li>Offer a sample to hook buyers.</li>
       </ul>
       <h3>Live Example</h3>
-      <a href="https://example.com/ebook" style="color: #4a90e2;">Get my Monetization Ebook for $9.99!</a>
-      <span style="color: #4a90e2;">← This is a digital product link!</span>
+      <a href="https://example.com/ebook" class="digital-product-link">Get my Monetization Ebook for $9.99!</a>
+      <span class="section-arrow">← This is a digital product link!</span>
       <p>If you bought that, I’d pocket $9.99 (minus a small fee).</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $9.99 from a digital product sale!');">Simulate Sale (+$9.99)</button>
+      <button class="simulate-btn" data-method="digital-products">Simulate Sale (+$9.99)</button>
     </section>
 
-    <section id="memberships-subscriptions" class="monetization-section">
-      <h2>Memberships & Subscriptions</h2>
+    <section id="memberships-subscriptions" class="monetization-section lazy-section" data-content="memberships">
+      <h2>Memberships &amp; Subscriptions</h2>
       <h3>What Is It?</h3>
       <p>You charge visitors for access to premium content—like exclusive articles, videos, or a community. Think Patreon or Substack.</p>
       <h3>How Does It Work?</h3>
-      <p>Set up a paywall using a tool like Memberful, then offer teasers to entice sign-ups. Charge monthly or yearly.</p>
+      <p>Set up a paywall using a tool like Memberful, then offer teasers to entice sign‑ups. Charge monthly or yearly.</p>
       <h3>Pros and Cons</h3>
       <ul>
         <li><strong>Pros</strong>: Recurring revenue, loyal fans.</li>
@@ -156,14 +164,14 @@
         <li>Start small—$5/month is a sweet spot.</li>
       </ul>
       <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px;">[Premium Content: Subscribe for $10/month to unlock!]</div>
-      <span style="color: #4a90e2;">← This is a membership paywall!</span>
+      <div class="placeholder">[Premium Content: Subscribe for $10/month to unlock!]</div>
+      <span class="section-arrow">← This is a membership paywall!</span>
       <p>A subscriber here would net me $10 monthly.</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $10.00 from a subscription!');">Simulate Subscription (+$10.00)</button>
+      <button class="simulate-btn" data-method="memberships">Simulate Subscription (+$10.00)</button>
     </section>
 
-    <section id="donations" class="monetization-section">
+    <section id="donations" class="monetization-section lazy-section" data-content="donations">
       <h2>Donations</h2>
       <h3>What Is It?</h3>
       <p>You ask your audience to support you directly, usually through platforms like Buy Me a Coffee or PayPal.</p>
@@ -178,20 +186,20 @@
       <ul>
         <li>Say “thank you” sincerely.</li>
         <li>Offer perks (e.g., a shoutout).</li>
-        <li>Don’t guilt-trip your readers.</li>
+        <li>Don’t guilt‑trip your readers.</li>
       </ul>
       <h3>Live Example</h3>
-      <a href="https://example.com/donate" style="color: #4a90e2;">Buy Me a Coffee!</a>
-      <span style="color: #4a90e2;">← This is a donation link!</span>
+      <a href="https://example.com/donate" class="donation-link">Buy Me a Coffee!</a>
+      <span class="section-arrow">← This is a donation link!</span>
       <p>A kind soul might toss $3 my way.</p>
       <h3>Try It Out</h3>
-      <button onclick="alert('You earned $3.00 from a donation!');">Simulate Donation (+$3.00)</button>
+      <button class="simulate-btn" data-method="donations">Simulate Donation (+$3.00)</button>
     </section>
 
-    <section id="advanced-techniques" class="monetization-section">
+    <section id="advanced-techniques" class="monetization-section lazy-section" data-content="advanced">
       <h2>Advanced Techniques</h2>
       <h3>What Are They?</h3>
-      <p>Once you’ve mastered the basics, level up with these:</p>
+      <p>Once you’ve mastered the basics, level up with these advanced methods:</p>
       <ul>
         <li><strong>Programmatic Ads</strong>: Automated ad buying for better rates.</li>
         <li><strong>Native Advertising</strong>: Ads that blend into your content, like a chameleon.</li>
@@ -206,7 +214,7 @@
       <p>No live example here—these are trickier to show live, but imagine a sleek ad seamlessly woven into this text—that’s native advertising!</p>
     </section>
 
-    <section id="conclusion" class="monetization-section">
+    <section id="conclusion" class="monetization-section lazy-section" data-content="conclusion">
       <h2>Conclusion</h2>
       <p>Wow, you made it through the wall of text! You’ve now seen how to monetize a website with:</p>
       <ul>
@@ -219,7 +227,7 @@
       </ul>
       <p>And you’ve seen it all in action, with arrows pointing out each example. This site itself is a living demo—every click or interaction could’ve earned me real cash! Your <strong>Total Earnings</strong> from this tutorial are up top—did it climb as you played along?</p>
       <p>Now it’s your turn. Pick one method, start small, and grow from there. Got questions? Hit me up—I’d love to hear how you’re monetizing your stuff!</p>
-      <p>That’s it! This massive tutorial is designed to teach by doing, with real meta-examples you can see and interact with. Go forth and make some money! 🚀</p>
+      <p>That’s it! This massive tutorial is designed to teach by doing, with real meta‑examples you can see and interact with. Go forth and make some money! 🚀</p>
     </section>
   </main>
 

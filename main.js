@@ -2,83 +2,73 @@ document.addEventListener("DOMContentLoaded", () => {
     let revenue = 0;
     const revenueAmountEl = document.getElementById("revenue-amount");
     const finalRevenueEl = document.getElementById("final-revenue");
-    
-    // Update revenue counter
+  
+    // Function to update revenue display
     function updateRevenue(amount) {
-        revenue += amount;
-        revenueAmountEl.textContent = revenue.toFixed(2);
+      revenue += amount;
+      revenueAmountEl.textContent = revenue.toFixed(2);
+      if (finalRevenueEl) {
         finalRevenueEl.textContent = revenue.toFixed(2);
+      }
     }
-    
-    // GSAP Animations for sections
-    gsap.utils.toArray(".monetization-section").forEach(section => {
-        gsap.from(section, {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: section,
-                start: "top 80%",
-                toggleActions: "play none none reverse"
-            }
-        });
+  
+    // Attach event listeners to simulation buttons
+    document.querySelectorAll("button.simulate-btn").forEach(button => {
+      button.addEventListener("click", function() {
+        const method = this.dataset.method;
+        let amount = 0;
+        switch (method) {
+          case "display-ads":
+            amount = 0.10;
+            break;
+          case "affiliate-marketing":
+            amount = 5.00;
+            break;
+          case "sponsored-content":
+            amount = 50.00;
+            break;
+          case "digital-products":
+            amount = 9.99;
+            break;
+          case "memberships":
+            amount = 10.00;
+            break;
+          case "donations":
+            amount = 3.00;
+            break;
+          default:
+            amount = 0;
+        }
+        updateRevenue(amount);
+        alert(`You earned $${amount.toFixed(2)}!`);
+      });
     });
-    
-    // Click handlers for monetization reveals
-    document.querySelectorAll(".reveal-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            const method = this.dataset.method;
-            const section = this.closest(".monetization-section");
-            const revealedContent = section.querySelector(".revealed-content");
-            
-            if (revealedContent.dataset.loaded === "true") return;
-            revealedContent.dataset.loaded = "true";
-            
-            switch (method) {
-                case "display-ads":
-                revealedContent.innerHTML = `<p><strong>Earned $5!</strong> Display ads (e.g., Google AdSense) show banners or videos. <em>Do:</em> Place strategically. <em>Don’t:</em> Overload the page.</p>`;
-                updateRevenue(5);
-                break;
-                case "affiliate-marketing":
-                fetch("affiliate.json")
-                .then(response => response.json())
-                .then(data => {
-                    let content = "<p><strong>Earned $10!</strong> Promote products for commissions. <em>Do:</em> Choose relevant products. <em>Don’t:</em> Spam links.</p><ul>";
-                    data.forEach(product => {
-                        content += `<li><a href="${product.link}" target="_blank">${product.name}</a></li>`;
-                    });
-                    content += "</ul>";
-                    revealedContent.innerHTML = content;
-                    updateRevenue(10);
-                })
-                .catch(() => {
-                    revealedContent.innerHTML = "<p>Error loading affiliates. Try again!</p>";
-                });
-                break;
-                case "sponsored-content":
-                revealedContent.innerHTML = `<p><strong>Earned $15!</strong> Brands pay for posts. <em>Do:</em> Disclose sponsorships. <em>Don’t:</em> Mislead readers.</p><p>[Sponsor: CoolBrand™]</p>`;
-                updateRevenue(15);
-                break;
-                case "digital-products":
-                revealedContent.innerHTML = `<p><strong>Earned $20!</strong> Sell eBooks or courses (e.g., via Gumroad). <em>Do:</em> Offer value. <em>Don’t:</em> Overpromise.</p><a href="https://gumroad.com" target="_blank">Buy Now</a>`;
-                updateRevenue(20);
-                break;
-                case "paywalls":
-                revealedContent.innerHTML = `<p><strong>Earned $25!</strong> Lock premium content. <em>Do:</em> Provide teasers. <em>Don’t:</em> Hide too much.</p><p>[Premium Locked]</p>`;
-                updateRevenue(25);
-                break;
-                case "dropshipping":
-                revealedContent.innerHTML = `<p><strong>Earned $30!</strong> Sell products without inventory. <em>Do:</em> Research suppliers. <em>Don’t:</em> Ignore shipping delays.</p><p>[Mock Store]</p>`;
-                updateRevenue(30);
-                break;
-                case "donations":
-                revealedContent.innerHTML = `<p><strong>Earned $5!</strong> Ask for support (e.g., Buy Me a Coffee). <em>Do:</em> Be grateful. <em>Don’t:</em> Beg excessively.</p><a href="https://www.buymeacoffee.com" target="_blank">Donate</a>`;
-                updateRevenue(5);
-                break;
-            }
-            
-            revealedContent.style.display = "block";
-            gsap.from(revealedContent, { opacity: 0, duration: 0.5 });
-        });
+  
+    // Animate lazy sections with GSAP as they scroll into view
+    gsap.utils.toArray(".lazy-section").forEach(section => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        }
+      });
     });
-});
+  
+    // IntersectionObserver for lazy-loading sections
+    const lazySections = document.querySelectorAll(".lazy-section");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("loaded");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px 200px 0px" });
+  
+    lazySections.forEach(section => observer.observe(section));
+  });
+  
