@@ -13,3 +13,5 @@ About meta tag:
 https://support.google.com/adsense/answer/12169212#metatag?hl=en_US
 
 //storage.googleapis.com/support-kms-prod/0N2mLtwWPlGQ1XSAFH6xZczvbZ1tM3bNwfkX
+https://www.scottdelong.com/guides/monetize-your-website/
+https://fourthwall.com/blog/how-to-monetize-your-website-a-quick-guide-for-beginners
