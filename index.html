@@ -1,249 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Monetize</title>
-  <meta name="description" content="Learn website monetization methods in a fun, interactive way—while we monetize this site in real-time!" />
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="How to Monetize" />
-  <meta property="og:description" content="A tutorial that teaches monetization by doing it live!" />
-  <meta property="og:image" content="https://how-to-monetize.com/og-image.jpg" />
-  <!-- Schema Markup for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "How to Monetize",
-      "description": "A tutorial on website monetization methods with live examples."
-    }
-  </script>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- GSAP & ScrollTrigger (deferred for performance) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Monetize Your Website: The Ultimate Guide</title>
+    <meta name="description" content="Learn every way to monetize your website with this massive tutorial covering display ads, affiliate marketing, sponsored content, and more." />
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="How to Monetize Your Website" />
+    <meta property="og:description" content="A complete guide to turning your website into a revenue stream with full tutorials." />
+    <meta property="og:image" content="https://your-site.com/og-image.jpg" />
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "How to Monetize Your Website",
+            "description": "An in-depth tutorial on all website monetization methods with examples."
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- JavaScript Libraries (Deferred for Performance) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-  <!-- Header Layer -->
-  <header id="header" class="layer">
-    <h1>So you want to monetize your site?</h1>
-    <div id="revenue-counter">Total Earnings: $<span id="revenue-amount">0.00</span></div>
-  </header>
-
-  <!-- Main Content Layer -->
-  <main class="layer">
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>Monetizing your website is all about turning your traffic into cash. Whether you’ve got a blog, a portfolio, or just a cool idea, there are tons of ways to make money online. In this tutorial, I’ll break down the most popular methods and show you how they work—by actually using them on this page. As you scroll, you’ll see real ads, affiliate links, and more, each with an arrow pointing to it so you can see it in action. Pretty meta, huh? Let’s kick things off with one of the classics: display ads.</p>
-    </section>
-
-    <section id="display-ads" class="monetization-section">
-      <h2>Display Ads</h2>
-      <h3>What Are They?</h3>
-      <p>Display ads are those banners, boxes, or videos you see on websites. Ad networks like Google AdSense pay you every time someone views or clicks them. It’s a simple way to earn passive income, and you’ve probably seen them all over the internet.</p>
-      <h3>How Do They Work?</h3>
-      <p>You sign up with an ad network, paste their code into your site, and voilà—ads start showing up. You get paid based on impressions (how many people see the ad) or clicks (how many people interact with it).</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: Easy to set up, scales with traffic.</li>
-        <li><strong>Cons</strong>: Can annoy users if overdone, lower earnings without huge traffic.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Place ads where they’re visible but not intrusive (like the side of the page).</li>
-        <li>Avoid covering content—users hate that.</li>
-        <li>Test different sizes and positions to see what works.</li>
-      </ul>
-      <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px; text-align: center;">[Ad Placeholder: Imagine a real banner ad here!]</div>
-      <span style="color: #4a90e2;">← Here’s what a side-of-the-page ad looks like!</span>
-      <p>This is where a real ad would sit—maybe a 300x250 pixel banner. If this were live, I’d earn a few cents every time you saw it or clicked it.</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $0.10 from a display ad click!');">Simulate Ad Click (+$0.10)</button>
-    </section>
-
-    <section id="affiliate-marketing" class="monetization-section">
-      <h2>Affiliate Marketing</h2>
-      <h3>What Is It?</h3>
-      <p>Affiliate marketing is when you promote someone else’s product and earn a commission for every sale made through your link. Think of it like being a digital salesperson.</p>
-      <h3>How Does It Work?</h3>
-      <p>You join an affiliate program (like Amazon Associates), grab a unique link, and share it on your site. When someone buys through your link, you get a cut—usually 5-20% of the sale.</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: High earning potential, no inventory needed.</li>
-        <li><strong>Cons</strong>: Takes time to build trust, depends on conversions.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Pick products that match your audience.</li>
-        <li>Be honest—disclose that it’s an affiliate link.</li>
-        <li>Use compelling calls-to-action (CTAs).</li>
-      </ul>
-      <h3>Live Example</h3>
-      <a href="https://example.com/affiliate-product" style="color: #4a90e2;">Buy this awesome web hosting plan!</a>
-      <span style="color: #4a90e2;">← This is an affiliate link!</span>
-      <p>If you clicked that and bought hosting, I’d earn a commission—maybe $5 or more.</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $5.00 from an affiliate sale!');">Simulate Purchase (+$5.00)</button>
-    </section>
-
-    <section id="sponsored-content" class="monetization-section">
-      <h2>Sponsored Content</h2>
-      <h3>What Is It?</h3>
-      <p>Sponsored content is when a brand pays you to write about them or feature their stuff on your site. It’s like an ad, but more integrated into your content.</p>
-      <h3>How Does It Work?</h3>
-      <p>A company contacts you (or you pitch them), you agree on a fee, and you create a post or section showcasing their product. Disclosure is key—it’s legally required!</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: Big payouts, builds partnerships.</li>
-        <li><strong>Cons</strong>: Requires an audience, can feel salesy.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Keep it authentic—only promote what you’d use.</li>
-        <li>Label it clearly: “Sponsored by [Brand].”</li>
-        <li>Negotiate fair rates based on your reach.</li>
-      </ul>
-      <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px;">[Sponsored by CoolBrand™: This section is brought to you by our pals at CoolBrand!]</div>
-      <span style="color: #4a90e2;">← This is sponsored content!</span>
-      <p>A real sponsor might pay $50 or more for this spot.</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $50.00 from a sponsor!');">Simulate Sponsorship (+$50.00)</button>
-    </section>
-
-    <section id="selling-digital-products" class="monetization-section">
-      <h2>Selling Digital Products</h2>
-      <h3>What Is It?</h3>
-      <p>You create and sell your own stuff—like ebooks, courses, or templates—directly to your audience. It’s all profit, minus platform fees.</p>
-      <h3>How Does It Work?</h3>
-      <p>Make a product, host it on a platform like Gumroad or Teachable, and link to it from your site. People buy, you deliver digitally.</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: High margins, full control.</li>
-        <li><strong>Cons</strong>: Takes time to create, needs marketing.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Solve a problem your audience has.</li>
-        <li>Price it right—test $5, $10, or $20.</li>
-        <li>Offer a sample to hook buyers.</li>
-      </ul>
-      <h3>Live Example</h3>
-      <a href="https://example.com/ebook" style="color: #4a90e2;">Get my Monetization Ebook for $9.99!</a>
-      <span style="color: #4a90e2;">← This is a digital product link!</span>
-      <p>If you bought that, I’d pocket $9.99 (minus a small fee).</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $9.99 from a digital product sale!');">Simulate Sale (+$9.99)</button>
-    </section>
-
-    <section id="memberships-subscriptions" class="monetization-section">
-      <h2>Memberships & Subscriptions</h2>
-      <h3>What Is It?</h3>
-      <p>You charge visitors for access to premium content—like exclusive articles, videos, or a community. Think Patreon or Substack.</p>
-      <h3>How Does It Work?</h3>
-      <p>Set up a paywall using a tool like Memberful, then offer teasers to entice sign-ups. Charge monthly or yearly.</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: Recurring revenue, loyal fans.</li>
-        <li><strong>Cons</strong>: Need consistent value, harder to start.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Give freebies to build trust.</li>
-        <li>Keep premium content fresh.</li>
-        <li>Start small—$5/month is a sweet spot.</li>
-      </ul>
-      <h3>Live Example</h3>
-      <div style="background: #f0f0f0; padding: 20px;">[Premium Content: Subscribe for $10/month to unlock!]</div>
-      <span style="color: #4a90e2;">← This is a membership paywall!</span>
-      <p>A subscriber here would net me $10 monthly.</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $10.00 from a subscription!');">Simulate Subscription (+$10.00)</button>
-    </section>
-
-    <section id="donations" class="monetization-section">
-      <h2>Donations</h2>
-      <h3>What Is It?</h3>
-      <p>You ask your audience to support you directly, usually through platforms like Buy Me a Coffee or PayPal.</p>
-      <h3>How Does It Work?</h3>
-      <p>Add a donation button or link, and encourage contributions with a heartfelt message. It’s all voluntary!</p>
-      <h3>Pros and Cons</h3>
-      <ul>
-        <li><strong>Pros</strong>: Simple, no middleman.</li>
-        <li><strong>Cons</strong>: Unpredictable, relies on generosity.</li>
-      </ul>
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Say “thank you” sincerely.</li>
-        <li>Offer perks (e.g., a shoutout).</li>
-        <li>Don’t guilt-trip your readers.</li>
-      </ul>
-      <h3>Live Example</h3>
-      <a href="https://example.com/donate" style="color: #4a90e2;">Buy Me a Coffee!</a>
-      <span style="color: #4a90e2;">← This is a donation link!</span>
-      <p>A kind soul might toss $3 my way.</p>
-      <h3>Try It Out</h3>
-      <button onclick="alert('You earned $3.00 from a donation!');">Simulate Donation (+$3.00)</button>
-    </section>
-
-    <section id="advanced-techniques" class="monetization-section">
-      <h2>Advanced Techniques</h2>
-      <h3>What Are They?</h3>
-      <p>Once you’ve mastered the basics, level up with these:</p>
-      <ul>
-        <li><strong>Programmatic Ads</strong>: Automated ad buying for better rates.</li>
-        <li><strong>Native Advertising</strong>: Ads that blend into your content, like a chameleon.</li>
-      </ul>
-      <h3>How Do They Work?</h3>
-      <p>Programmatic uses AI to sell ad space; native ads match your site’s style for higher engagement.</p>
-      <h3>Quick Tips</h3>
-      <ul>
-        <li>Research ad exchanges for programmatic.</li>
-        <li>Design native ads to feel organic.</li>
-      </ul>
-      <p>No live example here—these are trickier to show live, but imagine a sleek ad seamlessly woven into this text—that’s native advertising!</p>
-    </section>
-
-    <section id="conclusion" class="monetization-section">
-      <h2>Conclusion</h2>
-      <p>Wow, you made it through the wall of text! You’ve now seen how to monetize a website with:</p>
-      <ul>
-        <li>Display ads (banners with clicks).</li>
-        <li>Affiliate marketing (product links).</li>
-        <li>Sponsored content (brand deals).</li>
-        <li>Digital products (your own creations).</li>
-        <li>Memberships (paywalls).</li>
-        <li>Donations (fan support).</li>
-      </ul>
-      <p>And you’ve seen it all in action, with arrows pointing out each example. This site itself is a living demo—every click or interaction could’ve earned me real cash! Your <strong>Total Earnings</strong> from this tutorial are up top—did it climb as you played along?</p>
-      <p>Now it’s your turn. Pick one method, start small, and grow from there. Got questions? Hit me up—I’d love to hear how you’re monetizing your stuff!</p>
-      <p>That’s it! This massive tutorial is designed to teach by doing, with real meta-examples you can see and interact with. Go forth and make some money! 🚀</p>
-    </section>
-  </main>
-
-  <!-- Footer Layer -->
-  <footer id="final-section" class="layer">
-    <h2>Now You Know!</h2>
-    <p>Total Earnings: $<span id="final-revenue">0.00</span></p>
-    <p>Start monetizing your own site today!</p>
-  </footer>
-
-  <!-- Noscript Fallback for SEO -->
-  <noscript>
-    <p>This site uses JavaScript for interactivity. Enable it for the full experience, or explore the static content below:</p>
-    <ul>
-      <li>Display Ads: Place ads to earn revenue.</li>
-      <li>Affiliate Marketing: Share product links for commissions.</li>
-      <li>Sponsored Content: Partner with brands.</li>
-      <li>Digital Products: Sell eBooks or courses.</li>
-      <li>Memberships: Lock premium content.</li>
-      <li>Donations: Ask for support.</li>
-    </ul>
-  </noscript>
-
-  <!-- Main JavaScript (Deferred) -->
-  <script src="main.js" defer></script>
-</body>
-</html>
+    <!-- Header -->
+    <header>
+        <h1>How to Monetize Your Website: The Ultimate Guide</h1>
+        <p>Your one-stop resource for turning traffic into cash.</p>
+    </header>
+    
+    <!-- Table of Contents -->
+    <nav id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#display-ads">Display Ads (Including Google AdSense)</a></li>
+            <li><a href="#affiliate-marketing">Affiliate Marketing</a></li>
+            <li><a href="#sponsored-content">Sponsored Content</a></li>
+            <li><a href="#selling-digital-products">Selling Digital Products</a></li>
+            <li><a href="#memberships-subscriptions">Memberships & Subscriptions</a></li>
+            <li><a href="#donations">Donations</a></li>
+            <li><a href="#advanced-techniques">Advanced Techniques</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        ### Introduction Section
+        <section id="introduction" class="lazy-section" data-content="introduction">
+            <h2>Introduction</h2>
+            <p>Hey there! If you’ve got a website, you’re sitting on a potential goldmine. Monetizing your site means taking that traffic—whether it’s a trickle or a flood—and turning it into real money. This isn’t just about slapping some Google AdSense banners up (though we’ll cover that too). It’s about exploring every dang option out there: display ads, affiliate marketing, sponsored content, selling your own stuff, memberships, donations, and even some fancy advanced tricks. This page is your ultimate wall-of-text tutorial. It’s long, it’s detailed, and it’s got everything you need to start cashing in. Keep an eye out for the arrows (←) pointing to examples right here on the page. Oh, and don’t worry about the length—it loads fast because we’re dynamically loading each block as you scroll. Ready? Let’s get into it!</p>
+        </section>
+        
+        ### Display Ads Section
+        <section id="display-ads" class="lazy-section" data-content="display-ads">
+            <h2>Display Ads (Including Google AdSense)</h2>
+            
+            #### What Are Display Ads?
+            <p>Display ads are those little (or not so little) banners, boxes, or video ads you see plastered on websites. They’re served up by ad networks like Google AdSense, Media.net, or Ezoic, and they pay you every time someone views them (impressions) or clicks them. It’s the classic “set it and forget it” way to monetize, perfect for beginners or sites with decent traffic.</p>
+            
+            #### How Do They Work?
+            <p>You sign up with an ad network, grab a chunk of code, and stick it into your site’s HTML where you want the ads to show up. The network handles the rest—finding advertisers, serving the ads, and sending you a paycheck. For example, with Google AdSense, you apply, wait for approval, create ad units (like a 300x250 banner), and paste the code. Then, bam, ads start appearing, and you earn based on how many people see or click them.</p>
+            
+            #### Pros and Cons
+            <ul>
+                <li>**Pros**: Super easy to set up, totally passive once it’s running, and scales with your traffic. More visitors = more money.</li>
+                <li>**Cons**: Can annoy users if they’re too in-your-face, payouts are tiny without massive traffic, and some networks (like AdSense) have strict rules.</li>
+            </ul>
+            
+            #### Best Practices
+            <ul>
+                <li>Put ads where they’re noticeable but not obnoxious—think sidebars, headers, or between paragraphs.</li>
+                <li>Test different sizes (e.g., 728x90 leaderboards vs. 300x600 skyscrapers) to see what works.</li>
+                <li>Don’t overdo it—too many ads tank your user experience and bounce rate.</li>
+                <li>Use responsive ad units so they look good on phones and desktops.</li>
+            </ul>
+            
+            #### Live Example
+            <div style="background: #f0f0f0; padding: 20px; text-align: center; margin: 10px 0;">[Ad Placeholder: Picture a flashy banner ad right here!]</div>
+            <span style="color: #4a90e2;">← This is where an ad would go!</span>
+            
+            #### Deep Dive: Setting Up Google AdSense
+            <p>Let’s zoom in on Google AdSense since it’s the big daddy of display ads. Here’s the full step-by-step:</p>
+            <ol>
+                <li>**Sign Up**: Head to <a href="https://adsense.google.com" target="_blank">adsense.google.com</a>, enter your site’s URL, and apply. You’ll need a site with some content already—Google doesn’t like empty pages.</li>
+                <li>**Get Approved**: Google reviews your site for policy compliance (no adult content, no scams, etc.). This can take anywhere from a day to a couple of weeks. Be patient!</li>
+                <li>**Create Ad Units**: Once approved, log in, go to “Ads,” and pick “Ad Units.” Choose a type (e.g., display, in-feed), customize it, and hit “Create.” You’ll get a code snippet.</li>
+                <li>**Add to Your Site**: Copy that code and paste it into your HTML where you want the ad—like between `<div>` tags or in your sidebar. Save and upload your changes.</li>
+                    <li>**Wait for Ads**: It might take a few hours for ads to start showing. Once they do, you’ll see earnings trickle in via the AdSense dashboard.</li>
+                    <li>**Optimize**: Check your reports to see which ads perform best. Tweak placements or try auto-ads (Google’s AI picks spots for you).</li>
+                </ol>
+                <p>Here’s what it might look like in action (imagine these as screenshots on your site):</p>
+                <div style="background: #f0f0f0; padding: 20px; text-align: center; margin: 10px 0;">[Screenshot Placeholder: Signing up for AdSense]</div>
+                <div style="background: #f0f0f0; padding: 20px; text-align: center; margin: 10px 0;">[Screenshot Placeholder: Creating an ad unit]</div>
+                <span style="color: #4a90e2;">← These show you the process!</span>
+            </section>
+            
+            ### Affiliate Marketing Section
+            <section id="affiliate-marketing" class="lazy-section" data-content="affiliate-marketing">
+                <h2>Affiliate Marketing</h2>
+                
+                #### What Is Affiliate Marketing?
+                <p>Affiliate marketing is where you promote someone else’s products or services and earn a commission when your readers buy through your special link. Think of it as being a middleman—except you don’t deal with inventory or shipping.</p>
+                
+                #### How Does It Work?
+                <p>Join an affiliate program like Amazon Associates, ShareASale, or ClickBank. They give you a unique link for each product. You sprinkle those links in your blog posts, reviews, or banners. When someone clicks and buys, you get a cut—anywhere from 1% to 50% depending on the program.</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: Huge earning potential (especially with high-ticket items), no customer service headaches, and you can do it with any niche.</li>
+                    <li>**Cons**: Takes time to build trust, income depends on conversions (not just clicks), and some niches are crazy competitive.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Pick products your audience actually wants—don’t push random junk.</li>
+                    <li>Write honest reviews or tutorials to show why the product’s worth it.</li>
+                    <li>Disclose your affiliate links (e.g., “This is an affiliate link—I earn a commission if you buy!”) to stay legal and transparent.</li>
+                    <li>Use catchy calls-to-action like “Grab it here” or “Check it out.”</li>
+                </ul>
+                
+                #### Live Example
+                <p>Need a great hosting plan? Try <a href="https://example.com/affiliate-hosting" style="color: #4a90e2;">Bluehost</a>—it’s fast and affordable!</p>
+                <span style="color: #4a90e2;">← This is an affiliate link!</span>
+            </section>
+            
+            ### Sponsored Content Section
+            <section id="sponsored-content" class="lazy-section" data-content="sponsored-content">
+                <h2>Sponsored Content</h2>
+                
+                #### What Is Sponsored Content?
+                <p>Sponsored content is when a brand pays you to feature their stuff on your site—like a blog post, video, or even a whole section. It’s less “ad” and more “story,” blending into your content.</p>
+                
+                #### How Does It Work?
+                <p>Either a brand reaches out, or you pitch them with your rates and audience stats. You agree on a price, create the content (e.g., “Why I Love Brand X”), and publish it with a “Sponsored by” label. Payment can be flat ($100-$10,000+) or tied to performance.</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: Big payouts, builds relationships with brands, and you control the narrative.</li>
+                    <li>**Cons**: Needs a decent audience to attract sponsors, can feel forced if it’s not authentic.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Only work with brands you’d actually use—your readers can smell BS a mile away.</li>
+                    <li>Label it clearly (e.g., “Sponsored by CoolBrand”) to follow FTC rules.</li>
+                    <li>Charge based on your reach—$50-$100 per 1,000 monthly visitors is a rough guide.</li>
+                </ul>
+                
+                #### Live Example
+                <div style="background: #f0f0f0; padding: 20px; margin: 10px 0;">[Sponsored by AwesomeCo: This post is brought to you by AwesomeCo—makers of the best widgets ever!]</div>
+                <span style="color: #4a90e2;">← This is sponsored content!</span>
+            </section>
+            
+            ### Selling Digital Products Section
+            <section id="selling-digital-products" class="lazy-section" data-content="selling-digital-products">
+                <h2>Selling Digital Products</h2>
+                
+                #### What Are Digital Products?
+                <p>Digital products are things you make and sell online—like eBooks, courses, templates, or software. They’re downloadable, so no shipping hassles.</p>
+                
+                #### How Does It Work?
+                <p>Create something valuable (e.g., an eBook on blogging), host it on Gumroad, Teachable, or your own site with a plugin like WooCommerce, and promote it. Customers pay, download, and you keep most of the cash.</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: High margins (no physical costs), you set the price, and it’s yours forever.</li>
+                    <li>**Cons**: Takes time to create, and you’ve gotta market it yourself.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Solve a specific problem—like “How to Grow Your Blog in 30 Days.”</li>
+                    <li>Offer a freebie (e.g., first chapter) to hook buyers.</li>
+                    <li>Test prices—$5 might get more sales, but $50 could mean bigger profits.</li>
+                </ul>
+                
+                #### Live Example
+                <p>Want to master monetization? Get my <a href="https://example.com/ebook" style="color: #4a90e2;">eBook for $9.99</a>!</p>
+                <span style="color: #4a90e2;">← This is a digital product link!</span>
+            </section>
+            
+            ### Memberships & Subscriptions Section
+            <section id="memberships-subscriptions" class="lazy-section" data-content="memberships-subscriptions">
+                <h2>Memberships & Subscriptions</h2>
+                
+                #### What Are They?
+                <p>Memberships and subscriptions charge users for access to exclusive stuff—think premium articles, videos, or a private community.</p>
+                
+                #### How Do They Work?
+                <p>Set up a paywall with tools like Patreon, Substack, or Memberful. Offer free content to draw people in, then charge for the good stuff (e.g., $5/month for insider tips).</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: Steady, predictable income and a tight-knit audience.</li>
+                    <li>**Cons**: You’ve gotta keep delivering fresh content, and it’s tough to grow at first.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Mix free and paid content—tease them with the freebies.</li>
+                    <li>Start cheap ($3-$10/month) to get traction.</li>
+                    <li>Interact with members—make them feel special.</li>
+                </ul>
+                
+                #### Live Example
+                <div style="background: #f0f0f0; padding: 20px; margin: 10px 0;">[Join for $10/month to unlock premium tips!]</div>
+                <span style="color: #4a90e2;">← This is a membership paywall!</span>
+            </section>
+            
+            ### Donations Section
+            <section id="donations" class="lazy-section" data-content="donations">
+                <h2>Donations</h2>
+                
+                #### What Are Donations?
+                <p>Donations let your fans support you directly—no strings attached. Think “Buy Me a Coffee” or PayPal buttons.</p>
+                
+                #### How Do They Work?
+                <p>Add a donation link or widget to your site and ask nicely. Platforms like Ko-fi or Patreon make it easy, often with zero fees.</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: Dead simple to set up, no pressure on users.</li>
+                    <li>**Cons**: Totally unreliable—some months you’ll get nothing.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Say thanks—every dime counts!</li>
+                    <li>Offer tiny rewards (e.g., a shoutout for $5).</li>
+                    <li>Keep it chill—don’t beg.</li>
+                </ul>
+                
+                #### Live Example
+                <p>Love this guide? <a href="https://example.com/donate" style="color: #4a90e2;">Buy me a coffee!</a></p>
+                <span style="color: #4a90e2;">← This is a donation link!</span>
+            </section>
+            
+            ### Advanced Techniques Section
+            <section id="advanced-techniques" class="lazy-section" data-content="advanced-techniques">
+                <h2>Advanced Techniques</h2>
+                
+                #### What Are They?
+                <p>Ready to level up? Advanced methods like **programmatic ads** (AI-driven ad buying) and **native advertising** (ads that look like your content) can boost your earnings.</p>
+                
+                #### How Do They Work?
+                <p>Programmatic ads use platforms like Google Ad Manager to sell ad space in real-time auctions—higher rates, more work. Native ads blend in, like a “recommended reading” list that’s secretly paid for.</p>
+                
+                #### Pros and Cons
+                <ul>
+                    <li>**Pros**: Better payouts, slicker integration.</li>
+                    <li>**Cons**: Steeper learning curve, more setup.</li>
+                </ul>
+                
+                #### Best Practices
+                <ul>
+                    <li>Dive into ad exchanges for programmatic—start with Ezoic or AdThrive.</li>
+                    <li>Make native ads match your site’s vibe—users shouldn’t feel tricked.</li>
+                </ul>
+            </section>
+            
+            ### Conclusion Section
+            <section id="conclusion" class="lazy-section" data-content="conclusion">
+                <h2>Conclusion</h2>
+                <p>Whew, you made it! You’ve just waded through a massive tutorial on every way to monetize your site. From display ads to donations, you’ve got the tools to start raking in some dough. Pick one method, test it out, and tweak as you go. It’s a marathon, not a sprint—so keep at it, and watch your site turn into a money-making machine!</p>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2023 Your Name. Now go make some money!</p>
+        </footer>
+        
+        <!-- Noscript Fallback -->
+        <noscript>
+            <p>JavaScript’s off! You’ll miss the dynamic loading, but here’s the gist:</p>
+            <ul>
+                <li>Display Ads: Banners and videos.</li>
+                <li>Affiliate Marketing: Promote for commissions.</li>
+                <li>Sponsored Content: Brand partnerships.</li>
+                <li>Digital Products: Sell your creations.</li>
+                <li>Memberships: Charge for extras.</li>
+                <li>Donations: Ask for support.</li>
+            </ul>
+        </noscript>
+        
+        <!-- JavaScript -->
+        <script src="main.js" defer></script>
+    </body>
+    </html>
