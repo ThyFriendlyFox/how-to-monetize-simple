@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Monetize</title>
+  <meta name="description" content="Learn website monetization methods in a fun, interactive way—while we monetize this site in real-time!" />
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="How to Monetize" />
+  <meta property="og:description" content="A tutorial that teaches monetization by doing it live!" />
+  <meta property="og:image" content="https://how-to-monetize.com/og-image.jpg" />
+  <!-- Schema Markup for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "How to Monetize",
+      "description": "A tutorial on website monetization methods with live examples."
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- GSAP & ScrollTrigger (deferred for performance) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+  <!-- Header Layer -->
+  <header id="header" class="layer">
+    <h1>So you want to monetize your site?</h1>
+    <div id="revenue-counter">Revenue: $<span id="revenue-amount">0</span></div>
+  </header>
+
+  <!-- Main Content Layer -->
+  <main class="layer">
+    <!-- Display Ads Section -->
+    <section id="display-ads" class="monetization-section" data-method="display-ads">
+      <h2>Display Ads</h2>
+      <div class="content-placeholder">
+        <p>Click to see how ads make money!</p>
+      </div>
+      <button class="reveal-btn" data-method="display-ads">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-left"></div>
+    </section>
+
+    <!-- Affiliate Marketing Section -->
+    <section id="affiliate-marketing" class="monetization-section" data-method="affiliate-marketing">
+      <h2>Affiliate Marketing</h2>
+      <div class="content-placeholder">
+        <p>Click to explore affiliate links!</p>
+      </div>
+      <button class="reveal-btn" data-method="affiliate-marketing">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-right"></div>
+    </section>
+
+    <!-- Sponsored Content Section -->
+    <section id="sponsored-content" class="monetization-section" data-method="sponsored-content">
+      <h2>Sponsored Content</h2>
+      <div class="content-placeholder">
+        <p>Click to reveal a sponsor example!</p>
+      </div>
+      <button class="reveal-btn" data-method="sponsored-content">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-left"></div>
+    </section>
+
+    <!-- Digital Products Section -->
+    <section id="digital-products" class="monetization-section" data-method="digital-products">
+      <h2>Digital Products</h2>
+      <div class="content-placeholder">
+        <p>Click to sell a digital product!</p>
+      </div>
+      <button class="reveal-btn" data-method="digital-products">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-right"></div>
+    </section>
+
+    <!-- Paywalls & Memberships Section -->
+    <section id="paywalls" class="monetization-section" data-method="paywalls">
+      <h2>Paywalls & Memberships</h2>
+      <div class="content-placeholder">
+        <p>Click to lock content for profit!</p>
+      </div>
+      <button class="reveal-btn" data-method="paywalls">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-left"></div>
+    </section>
+
+    <!-- Dropshipping Section -->
+    <section id="dropshipping" class="monetization-section" data-method="dropshipping">
+      <h2>Dropshipping</h2>
+      <div class="content-placeholder">
+        <p>Click to launch a store!</p>
+      </div>
+      <button class="reveal-btn" data-method="dropshipping">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-right"></div>
+    </section>
+
+    <!-- Donations Section -->
+    <section id="donations" class="monetization-section" data-method="donations">
+      <h2>Donations</h2>
+      <div class="content-placeholder">
+        <p>Click to ask for support!</p>
+      </div>
+      <button class="reveal-btn" data-method="donations">Reveal</button>
+      <div class="revealed-content" data-loaded="false"></div>
+      <div class="arrow arrow-left"></div>
+    </section>
+  </main>
+
+  <!-- Footer Layer -->
+  <footer id="final-section" class="layer">
+    <h2>Now You Know!</h2>
+    <p>Total Earnings: $<span id="final-revenue">0</span></p>
+    <p>Start monetizing your own site today!</p>
+  </footer>
+
+  <!-- Noscript Fallback for SEO -->
+  <noscript>
+    <p>This site uses JavaScript for interactivity. Enable it for the full experience, or explore the static content below:</p>
+    <ul>
+      <li>Display Ads: Place ads to earn revenue.</li>
+      <li>Affiliate Marketing: Share product links for commissions.</li>
+      <li>Sponsored Content: Partner with brands.</li>
+      <li>Digital Products: Sell eBooks or courses.</li>
+      <li>Paywalls: Lock premium content.</li>
+      <li>Dropshipping: Sell products without inventory.</li>
+      <li>Donations: Ask for support.</li>
+    </ul>
+  </noscript>
+
+  <!-- Main JavaScript (Deferred) -->
+  <script src="main.js" defer></script>
+</body>
+</html>
