@@ -1,0 +1,13 @@
+Preqrequisites Before You Start:
+-A domain you own. I own how-to-monetize.com
+-A google account
+-A bank account
+
+About Adsense Code:
+https://support.google.com/adsense/answer/9274634?hl=en
+
+About Ads.txt:
+https://support.google.com/adsense/answer/12171612?hl=en&visit_id=638767253546383830-3642495192&rd=1
+
+About meta tag:
+https://support.google.com/adsense/answer/12169212#metatag?hl=en_US
