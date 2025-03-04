@@ -86,25 +86,6 @@
     margin: 0.5rem 0;
   }
   
-  /* Placeholder styling */
-  .placeholder {
-    background: #edf2f7;
-    padding: 1rem;
-    margin: 1rem 0;
-    text-align: center;
-    border-radius: 8px;
-    font-style: italic;
-    color: #718096;
-  }
-  
-  /* Section arrow inline text */
-  .section-arrow {
-    display: block;
-    font-size: 1rem;
-    color: var(--primary-color);
-    margin: 1rem 0;
-  }
-  
   /* Footer */
   footer.layer {
     background: var(--secondary-color);
