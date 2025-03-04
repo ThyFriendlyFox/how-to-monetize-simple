@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://how-to-monetize.com/sitemap.xml
