@@ -76,5 +76,65 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounter()
     setInterval(updateCounter, 60000) // Update every minute
   }
+
+  // Handle fixed navigation on scroll
+  const nav = document.querySelector(".site-nav")
+  let lastScrollY = window.scrollY
+
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      nav.classList.add("nav-hidden")
+    } else {
+      nav.classList.remove("nav-hidden")
+    }
+
+    lastScrollY = window.scrollY
+  })
 })
 
+// Add mobile menu functionality
+const mobileMenuButton = document.querySelector('.mobile-menu-button');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    mobileMenuButton.setAttribute(
+      'aria-expanded', 
+      navLinks.classList.contains('show').toString()
+    );
+  });
+}
+
+// Fix the GSAP animation to handle cases where GSAP isn't loaded yet
+window.addEventListener('load', () => {
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger)
+
+    // Animate sections as they come into view
+    gsap.utils.toArray(".lazy-section").forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      })
+    })
+
+    // Animate header elements on page load
+    gsap.from(".site-title", { opacity: 0, y: -20, duration: 1, delay: 0.2 })
+    gsap.from(".site-description", { opacity: 0, y: -15, duration: 1, delay: 0.4 })
+    gsap.from(".header-cta", { opacity: 0, y: -10, duration: 1, delay: 0.6 })
+    gsap.from("#revenue-counter", { opacity: 0, y: -5, duration: 1, delay: 0.8 })
+  } else {
+    // Fallback for when GSAP isn't loaded
+    document.querySelectorAll(".lazy-section").forEach(section => {
+      section.classList.add("loaded");
+    });
+  }
+});
